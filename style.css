@@ -1,0 +1,103 @@
+/* style.css */
+
+/* Base Styles */
+body { 
+    font-family: 'Poppins', sans-serif; 
+    color: #e8f5e9; 
+    scroll-behavior: smooth;
+    margin: 0;
+    overflow-x: hidden;
+    
+    /* Ito ang magpapaganda sa background mo */
+    background-color: #080a08; 
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(102, 187, 106, 0.12) 0px, transparent 50%), 
+        radial-gradient(at 100% 100%, rgba(67, 160, 71, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+}
+
+/* Glassmorphism Effect */
+.glass { 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(12px); 
+    border-radius: 24px; 
+    border: 1px solid rgba(255,255,255,0.08); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.glass:hover { 
+    border-color: #66bb6a; 
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(102, 187, 106, 0.15); 
+}
+
+/* Navigation Links Styling */
+.nav-link { 
+    transition: 0.3s; 
+    color: #e8f5e9;
+    text-decoration: none;
+}
+
+.nav-link:hover { 
+    color: #66bb6a; 
+    text-shadow: 0 0 10px rgba(102, 187, 106, 0.5);
+}
+
+/* Theme Colors */
+.accent-green { 
+    color: #66bb6a; 
+}
+
+.bg-green { 
+    background-color: #66bb6a; 
+}
+
+/* Custom Scrollbar for Chrome/Brave/Edge */
+::-webkit-scrollbar { 
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: #0f110f; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: linear-gradient(to bottom, #66bb6a, #43a047); 
+    border-radius: 10px; 
+    border: 2px solid #0f110f;
+}
+
+/* Section Spacing Fix */
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* --- ANIMATED TECH BACKGROUND --- */
+
+/* 1. Scrolling Circuit Grid */
+.circuit-grid {
+    background-image: 
+        linear-gradient(rgba(102, 187, 106, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102, 187, 106, 0.1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: scroll-grid 60s linear infinite;
+}
+
+@keyframes scroll-grid {
+    0% { background-position: 0 0; }
+    100% { background-position: -800px 800px; }
+}
+
+/* 2. Pulsing Neon Glows */
+.glowing-rays {
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(102, 187, 106, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(67, 160, 71, 0.1) 0px, transparent 50%);
+    animation: pulse-rays 10s infinite alternate;
+}
+
+@keyframes pulse-rays {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
